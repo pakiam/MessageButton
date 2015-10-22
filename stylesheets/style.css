@@ -63,51 +63,47 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 3, ../sass/style.sass */
+/* line 6, ../sass/style.sass */
 body {
   background-color: silver;
 }
 
-/* line 6, ../sass/style.sass */
-.message-button-holder {
+/* line 9, ../sass/style.sass */
+.message-button-transition, .message-button-extending, .message-button-holder, .message-center-button-holder, .message-center-button-holder-active {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+/* line 15, ../sass/style.sass */
+.message-button-extending, .message-button-holder, .message-center-button-holder {
   display: block;
   position: absolute;
-  background-color: #333333;
-  bottom: 10%;
-  left: 5%;
   width: 40px;
   height: 40px;
+  background-color: #333333;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
   z-index: 21;
   cursor: pointer;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
-/* line 24, ../sass/style.sass */
+/* line 28, ../sass/style.sass */
+.message-button-holder {
+  bottom: 10%;
+  left: 5%;
+}
+
+/* line 32, ../sass/style.sass */
 .message-center-button-holder {
-  position: absolute;
-  background-color: #333333;
-  width: 40px;
-  height: 40px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
   left: 50%;
   bottom: 50%;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
-/* line 39, ../sass/style.sass */
+/* line 36, ../sass/style.sass */
 .message-center-button-holder-active {
   position: absolute;
   background-color: rgba(51, 51, 51, 0.7);
@@ -120,43 +116,70 @@ body {
   height: 100%;
   z-index: 21;
   cursor: pointer;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
-  transition: all 0.5s linear;
 }
 
-/* line 56, ../sass/style.sass */
+/* line 49, ../sass/style.sass */
 .message-button {
   position: relative;
   display: inline-block;
   width: 100%;
   padding: 12px 12px;
 }
-/* line 61, ../sass/style.sass */
+/* line 54, ../sass/style.sass */
 .message-button i {
   color: #ffffff;
 }
 
-/* line 63, ../sass/style.sass */
-#overlay {
+/* line 57, ../sass/style.sass */
+#message-form-holder {
+  display: none;
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  background-color: rgba(51, 51, 51, 0.7);
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  margin-left: -400px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid lightgray;
+  z-index: 22;
 }
-/* line 75, ../sass/style.sass */
-#overlay:hover {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+/* line 66, ../sass/style.sass */
+#message-form-holder .title {
+  text-align: center;
+  margin-top: 15px;
+}
+/* line 69, ../sass/style.sass */
+#message-form-holder .title h1 {
+  color: #ffffff;
+  font-size: 200%;
+}
+/* line 72, ../sass/style.sass */
+#message-form-holder #message-form {
+  position: relative;
+  margin: 10px 10px;
+  width: 800px;
+}
+/* line 76, ../sass/style.sass */
+#message-form-holder #message-form input, #message-form-holder #message-form textarea {
+  display: inline-block;
+  width: 50%;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+/* line 81, ../sass/style.sass */
+#message-form-holder #message-form textarea {
+  resize: none;
+  vertical-align: middle;
+}
+/* line 84, ../sass/style.sass */
+#message-form-holder #message-form label {
+  display: inline-block;
+  width: 26%;
+  color: #ffffff;
+  text-align: right;
+}
+/* line 89, ../sass/style.sass */
+#message-form-holder #message-form .message-form-button {
+  display: block;
+  width: 60px;
+  margin: 20px auto;
+  padding: 5px 10px;
 }

@@ -1,16 +1,19 @@
 /*
 Error: File to import not found or unreadable: compass/reset.
-        on line 1 of style.sass
+        on line 4 of style.sass
 
-1: @import "compass/reset"
-2: 
-3: body
-4:   background-color: silver
+1: //This button was created by Maksim Loginov
+2: //Contact me: akiam@mail.ru
+3: //&copy 2015
+4: @import "compass/reset"
 5: 
-6: .message-button-holder
+6: body
+7:   background-color: silver
+8: 
+9: .message-button-transition
 
 Backtrace:
-style.sass:1
+style.sass:4
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:45:in `import'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -53,4 +56,4 @@ C:/Ruby22-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass/reset.\A         on line 1 of style.sass\A \A 1: @import \"compass/reset\"\A 2: \A 3: body\A 4:   background-color: silver\A 5: \A 6: .message-button-holder"; }
+  content: "Error: File to import not found or unreadable: compass/reset.\A         on line 4 of style.sass\A \A 1: //This button was created by Maksim Loginov\A 2: //Contact me: akiam@mail.ru\A 3: //&copy 2015\A 4: @import \"compass/reset\"\A 5: \A 6: body\A 7:   background-color: silver\A 8: \A 9: .message-button-transition"; }

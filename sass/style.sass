@@ -1,41 +1,38 @@
+//This button was created by Maksim Loginov
+//Contact me: akiam@mail.ru
+//&copy 2015
 @import "compass/reset"
 
 body
   background-color: silver
 
-.message-button-holder
+.message-button-transition
+  -webkit-transition: all .5s linear
+  -moz-transition: all .5s linear
+  -ms-transition: all .5s linear
+  -o-transition: all .5s linear
+  transition: all .5s linear
+.message-button-extending
   display: block
   position: absolute
-  background-color: rgb(51, 51, 51)
-  bottom: 10%
-  left: 5%
   width: 40px
   height: 40px
+  background-color: rgb(51, 51, 51)
   -webkit-border-radius: 50%
   -moz-border-radius: 50%
   border-radius: 50%
   z-index: 21
   cursor: pointer
-  -webkit-transition: all .5s linear
-  -moz-transition: all .5s linear
-  -ms-transition: all .5s linear
-  -o-transition: all .5s linear
-  transition: all .5s linear
+  @extend .message-button-transition
+
+.message-button-holder
+  @extend .message-button-extending
+  bottom: 10%
+  left: 5%
 .message-center-button-holder
-  position: absolute
-  background-color: rgb(51, 51, 51)
-  width: 40px
-  height: 40px
-  -webkit-border-radius: 50%
-  -moz-border-radius: 50%
-  border-radius: 50%
+  @extend .message-button-extending
   left: 50%
   bottom: 50%
-  -webkit-transition: all .5s linear
-  -moz-transition: all .5s linear
-  -ms-transition: all .5s linear
-  -o-transition: all .5s linear
-  transition: all .5s linear
 .message-center-button-holder-active
   position: absolute
   background-color: rgba(51, 51, 51, .7)
@@ -48,11 +45,7 @@ body
   height: 100%
   z-index: 21
   cursor: pointer
-  -webkit-transition: all .5s linear
-  -moz-transition: all .5s linear
-  -ms-transition: all .5s linear
-  -o-transition: all .5s linear
-  transition: all .5s linear
+  @extend .message-button-transition
 .message-button
   position: relative
   display: inline-block
@@ -60,20 +53,41 @@ body
   padding: 12px 12px
   i
     color: #ffffff
-#overlay
+
+#message-form-holder
+  display: none
   position: absolute
-  width: 50px
-  height: 50px
-  top: 50%
+  top: 30%
   left: 50%
-  background-color: rgba(51, 51, 51, .7)
-  -webkit-transition: all .4s linear
-  -moz-transition: all .4s linear
-  -ms-transition: all .4s linear
-  -o-transition: all .4s linear
-  transition: all .4s linear
-  &:hover
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+  margin-left: -400px
+  background: rgba(0, 0, 0, .4)
+  border: 1px solid lightgray
+  z-index: 22
+  .title
+    text-align: center
+    margin-top: 15px
+    h1
+      color: #ffffff
+      font-size: 200%
+  #message-form
+    position: relative
+    margin: 10px 10px
+    width: 800px
+    input, textarea
+      display: inline-block
+      width: 50%
+      margin-top: 20px
+      padding: 5px 10px
+    textarea
+      resize: none
+      vertical-align: middle
+    label
+      display: inline-block
+      width: 26%
+      color: #ffffff
+      text-align: right
+    .message-form-button
+      display: block
+      width: 60px
+      margin: 20px auto
+      padding: 5px 10px
