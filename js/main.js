@@ -27,4 +27,15 @@ $(document).ready(function () {
             setTimeout(fillWindow, 900);
         }
     });
+    $(".fa-close").on("click", function () {
+        if (open == 1)
+            $("#incredible-button").removeClass("message-center-button-holder-active").addClass("message-center-button-holder");
+            $("#message-form-holder").fadeOut(350);
+            function unFillWindow() {
+                $("#incredible-button").removeClass("message-center-button-holder").addClass("message-button-holder");
+            }
+
+            setTimeout(unFillWindow, 900);
+            open--;
+    })
 });

@@ -183,3 +183,13 @@ body {
   margin: 20px auto;
   padding: 5px 10px;
 }
+
+/* line 94, ../sass/style.sass */
+i.fa-close {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  color: #ffffff;
+  font-size: 30px;
+  cursor: pointer;
+}
